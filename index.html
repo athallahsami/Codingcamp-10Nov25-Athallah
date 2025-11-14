@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List Apps</title>
+    
+    <!-- Link to external css file -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <h1 class="text-2xl font-bold pb-5 text-white">Todo List Apps</h1>
+    </header>
+
+    <!-- Main content goes here -->
+    <main>
+        <!-- Form section -->
+        <section class="form section">
+            <form id="todo-form">
+                <input type="text" class="border rounded p-2" id="todo-input" placeholder="Enter a new todo" required>
+                <input type="date" class="border rounded p-2" id="todo-date" placeholder="Enter due date">
+                <button type="button" onclick="addTodo();" class="border rounded p-2 bg-green-600 text white">Add Todo</button>
+            </form>
+
+        </section>
+
+        <section class="flex pt-2 justify-between">
+            <!-- Filter options --> 
+            <button class="border rounded p-2 bg-blue-800 text-white">Filter Todo</button>
+            <!-- Clear All button -->
+             <button class="border rounded p-2 bg-red-600 text-white">Clear All Todos</button>
+        </section>
+
+        <section class="pt-2">
+            <header>
+                <h1 class="text-2xl font-semibold">List of Todos</h1>
+            </header>
+
+            <ul class="pt-2" id="todo-list">
+                
+                <li>No todos available</li>
+            </ul>
+        </section>
+    </main>
+    <!-- Footer section -->
+    <footer class="pt-5">
+        <p>&copy; 2025 Todo List Apps</p>
+    </footer>
+
+    <!-- Link to external Javascript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
