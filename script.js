@@ -2,11 +2,9 @@ console.log("Hello, word");
 
 // Temporary storage for todo items
 let todos = [];
-
 function addTodo() {
     const todoInput = document.getElementById("todo-input")
     const todoDate = document.getElementById("todo-date")
-
     console.log("Input", todoInput.value);
     console.log("Date", todoDate.value);
 
@@ -17,16 +15,12 @@ function addTodo() {
        todos.push({text: todoInput.value, date: todoDate.value});
        todoInput.value = '';
        todoDate.value = '';
-
        renderTodos();
     }
 }
-
 function renderTodos() {
     const todoList = document.getElementById('todo-list');
-
     todoList.innerHTML = '';
-
     todos.forEach((todo,_)=> {
         todoList.innerHTML += `
         <li>
@@ -34,23 +28,13 @@ function renderTodos() {
             <hr />
         </li>`;
     });
-
 }
-
 function clearTodos() {
     todos = [];
     renderTodos();
 }
-
 function filterTodos(){
      const filtered = todos.filter(item => !item.done);
             const todoList = document.getElementById('todo-List');
             todoList.innerHTML = '';
-             
-
-             
-        
-
-
-
 }
