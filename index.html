@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List Sami Apps</title>
+
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head> 
+<body class="p-4">
+
+    <!-- Header section -->
+    <header>
+        <h1 class="text-2xl font-bold pb-5">Todo List Hifzhi Apps</h1>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Form Section -->
+        <section class="form-section mb-4">
+            <form class="flex flex-wrap gap-2">
+                <input type="text" class="border rounded p-2 w-full sm:w-auto" id="input-text" placeholder="Enter a new todo item">
+                <input type="date" class="border rounded p-2 w-full sm:w-auto" id="input-date" placeholder="Enter due date">
+                <button type="button" onclick="addTodo();" class="border rounded p-2 bg-green-600 text-white" id="AddTodo">Add Todo</button>
+            </form>
+        </section>
+
+        <!-- Action Section -->
+        <section class="flex flex-wrap gap-2 items-center mb-4">
+            <input type="date" class="border rounded p-2" id="filter-date" placeholder="Filter by date">
+            <button type="button" onclick="filterTodos()" class="border rounded p-2 bg-blue-500 text-white" id="Filter">Filter Todos</button>
+            <button type="button" onclick="resetList()" class="border rounded p-2 bg-red-500 text-white" id="Clear">Clear All Todos</button>
+        </section>
+
+        <!-- Todo List Section -->
+        <section>
+            <header>
+                <h1 class="text-2xl font-semibold">List of Todos</h1>
+            </header>
+            <ul class="pt-2" id="todo-list">
+                <li class="text-gray-500">No todos available</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="pt-5">
+        <p><i>&copy;2025 Todo List Sami Apps</i></p>
+    </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
